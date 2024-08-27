@@ -2,6 +2,9 @@
 import asyncio
 from direct.showbase.ShowBase import ShowBase
 from panda3d.core import Shader
+from panda3d.core import LVector3
+from direct.gui.DirectButton import DirectButton
+from direct.gui import DirectGuiGlobals as DGG
 
 import panda3d.core
 panda3d.core.loadPrcFileData("", "default-model-extension .egg")
@@ -33,7 +36,7 @@ class Wrapper:
         self.selected_text="ground.jpg"
 
 
-        b=pig.create_button("switch me",(0,0,-0.5),0.05,self.set_tex2,tuple())
+        b=create_button("switch me",(0,0,-0.5),0.05,self.set_tex2,tuple())
 
         tex1=loader.loadTexture('testgrid.png')
         tex2=loader.loadTexture('ground.jpg')
